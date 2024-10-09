@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Dashboard</title>
+    <link rel="stylesheet" href="page2.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h1>Transaction Dashboard</h1>
+
+        <!-- Search and Month Select -->
+        <div class="search-select-container">
+            <input type="text" id="search" placeholder="Search transaction" class="search-input">
+            <select id="month-select" class="month-select">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3" selected>March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+
+        <!-- Transactions Table -->
+        <table id="transactions-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Sold</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-container">
+            <span id="page-number">Page No: 1</span>
+            <button id="prev-page" disabled>Previous</button>
+            <button id="next-page">Next</button>
+            <span>Per Page: 10</span>
+        </div>
+        <!-- Statistics Section -->
+        <div id="statistics">
+            <p>Total Sale Amount: <span id="totalSale"></span></p>
+            <p>Total Sold Items: <span id="soldItems"></span></p>
+            <p>Total Not Sold Items: <span id="notSoldItems"></span></p>
+        </div>
+
+    <!-- Bar Chart Section -->
+    <canvas id="barChart"></canvas>
+
+
+    </div>
+
+    <script src="app.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
